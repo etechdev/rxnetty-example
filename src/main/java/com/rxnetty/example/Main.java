@@ -1,4 +1,4 @@
-package com.nike.social;
+package com.rxnetty.example;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.handler.codec.http.HttpResponseStatus;
@@ -18,8 +18,6 @@ import rx.functions.Action1;
 
 /**
  * Simple class which demonstrates mocking using RxNetty
- * 
- * @author ebaer
  * 
  */
 public class Main {
