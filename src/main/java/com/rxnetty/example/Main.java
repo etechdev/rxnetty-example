@@ -27,6 +27,10 @@ public class Main {
         HttpServer<ByteBuf, ByteBuf> server = main.createServer();
         server.start();
 
+        /*
+         * Using RxNetty for the example requests. In our code, the requests
+         * would come from our tests which call the mocked service/API.
+         */
         RxNetty.createHttpGet("http://localhost:8484/").toBlocking()
                 .forEach(new Action1<HttpClientResponse<ByteBuf>>() {
                     public void call(HttpClientResponse<ByteBuf> t1) {
